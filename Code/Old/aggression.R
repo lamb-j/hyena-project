@@ -1,0 +1,7 @@
+setwd("~/NIMBioS_Research/Raw_Data")
+tblAggression1 <- read.csv("Aggression/~tblAggression_preupdate2011.csv")
+tblAggression2 <- read.csv("Aggression/~tblAgression_new2011_Virginia.csv")
+tblAggression3 <- read.csv("Aggression/~tblAgression_new2011_Molly.csv")
+tblAggression4 <- rbind(tblAggression1,tblAggression2)
+tblAggression <- rbind(tblAggression4,tblAggression3)
+write.csv(tblAggression,"tblAggression.csv")
